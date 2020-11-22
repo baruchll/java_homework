@@ -3,9 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-       // System.out.println(newFunc(3));
-       // System.out.println(primeF(5));
-        System.out.println(prime(10));
+        System.out.println(newFunc(3));
+        System.out.println(primeF(5));
+        System.out.println(prime(1000));
     }
 //שאלה 1
     public static int newFunc(int num) {

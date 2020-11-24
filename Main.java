@@ -3,20 +3,20 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(newFunc(3));
-        System.out.println(primeF(5));
-        System.out.println(prime(1000));
+
+        // System.out.println(primeN(7));
+        // System.out.println(prime(1000));
+         System.out.println(Sum(10));
     }
 //שאלה 1
-    public static int newFunc(int num) {
-
-        int res = 1;
-        for (int i = 1; i <= num; i++) {
-            res *= i;
+public static boolean primeN(int num){
+    for(int i = 2; i < num/2; i++){
+        if (num % i == 0){
+            return false;
         }
-
-        return res;
     }
+    return true;
+}
     //שאלה 2
     public static int prime(int num) {
 
@@ -48,24 +48,18 @@ public class Main {
         return i;
     }
 
-
-
-
-
-
-
 //שאלה 3
-    public static boolean primeF(int num){
-        for(int i = 2; i < Math.floor(num); i++){
-            if (num % i == 0){
-                return false;
-            }
+    public static int Sum(int num) {
+
+        int res = 0;
+        for (int i = 1; i <= num; i++) {
+            res += i;
+
         }
-        return true;
+
+        return res ;
     }
 
 
 
-
 }
-

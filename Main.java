@@ -1,64 +1,76 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
 
+
+
     public static void main(String[] args) {
+        binaryFunc(14);
+        //factorial(4);
+        //func(10);
 
-        // System.out.println(primeN(7));
-        // System.out.println(prime(1000));
-         System.out.println(Sum(10));
+
+       
     }
-//שאלה 1
-public static boolean primeN(int num){
-    for(int i = 2; i < num/2; i++){
-        if (num % i == 0){
-            return false;
+    //שאלה 1
+    public static void binaryFunc(int num){
+        String res = "";
+        while (num !=0){
+            res += num % 2;
+            num/=2;
+        }
+        for (int i = res.length() - 1; i >=0; i--){
+            System.out.print(res.charAt(i));
         }
     }
-    return true;
-}
+
     //שאלה 2
-    public static int prime(int num) {
+    public static void func(int num){
+        Random r=new Random();
+        int[] random=new int[5];
+        int[] distance=new int[5];
 
-        int i, j;
-        int count = 0;
-        for (i = 2; i <= 1000000; i++) {
-            boolean IsPrime = true;
+        for (int i=0;i<random.length;i++){
+            random[i]=r.nextInt(100);
+            System.out.println(random[i]);
+           distance[i]= Math.abs(num-random[i]);
 
-            for (j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    IsPrime = false;
-                    break;
-                }
-            }
-            if (IsPrime) {
-                if (IsPrime = true) {
-                    count++;
-                }
-                if (count >= num) {
-                    break;
-                }
-                System.out.println(i + ",");
+
+        }
+        int min=distance[0];
+        num=min;
+        for(int i=0;i<random.length;i++){
+            if(min>distance[i]){
+                min=distance[i];
+                num=random[i];
 
             }
-
         }
 
 
-        return i;
+        System.out.println("min: "+num);
+
+
+
+
     }
 
-//שאלה 3
-    public static int Sum(int num) {
+    //שאלה 3
+    public static void factorial(int num) {
 
-        int res = 0;
+        int res = 1;
         for (int i = 1; i <= num; i++) {
-            res += i;
+            res *= i;
 
         }
 
-        return res ;
+        System.out.println(res);
     }
+
+
 
 
 
